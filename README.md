@@ -5,13 +5,13 @@
 
 ## Table of Contents
 
-* 📌 [Project Overview](#project-overview)
-* 🔗 [Similar Projects](#similar-projects)
-* 🧰 [Free Tools](#free-tools)
+* [Project Overview](#project-overview)
+* [Similar Projects](#similar-projects)
+* [Free Tools](#free-tools)
 
 
 
-## 📌 Project Overview
+## Project Overview
 
 ### 💡 ملخص الفكرة
 المشروع عبارة عن منصة ذكية بتفحص أمان مواقع الويب وبتستخدم الذكاء الاصطناعي في اكتشاف الثغرات وتحليلها ومساعدة المطور يسدها. المنصة بتفحص الموقع من بره من غير ما تحتاج الكود، وبتعمل هجمات وهمية عشان تشوف فيه ثغرات ولا لأ. وكمان تقدر ترفع الـ Repository أو السورس كود بتاعك فتعدي على الملفات كلها وتفحصها بنفس الطريقة. بعد الفحص، المنصة بتقولك على كل ثغرة نوعها وخطورتها وبترتبهم من الأخطر للأقل خطورة، عشان تعرف تبدأ تسد منين. وفي المنصة شات AI تسأله فيشرحلك الثغرة دي خطورتها إيه، وتسدها إزاي، وتتفاداها بعد كده إزاي، ويديك كمان اقتراحات كود للحل من غير ما يعدل على الكود بتاعك.
@@ -37,7 +37,7 @@
 * **وضع تعليمي:** يشرح للطالب إزاي الهجوم بيتم على موقع تجريبي، وتوصيات OWASP Top 10.
 * **LLM محلي (Ollama):** للي مش عايز يبعت الكود لأي API خارجي.
 
-## 🔗 Similar Projects
+## Similar Projects
 
 ### 1. isitsecure
 
@@ -103,7 +103,7 @@
 
 بيجمع نتائج أدوات مختلفة لفحص الـNetwork والـHosts والـCode والـDependencies والـSecrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
 
-## 🧰 Free Tools
+## Free Tools
 List of free tools goes here...
 
 
