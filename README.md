@@ -104,6 +104,117 @@
 بيجمع نتائج أدوات مختلفة لفحص الـNetwork والـHosts والـCode والـDependencies والـSecrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
 
 ## Free Tools
-List of free tools goes here...
+
+### Web Scanning — DAST
+
+* **OWASP ZAP**
+  https://www.zaproxy.org/
+  **الاستخدام:** المحرك الأساسي للـDAST في المشروع، يفحص الـWeb App ويطلع الـFindings.
+
+* **Nuclei**
+  https://nuclei.projectdiscovery.io/
+  **الاستخدام:** فحص إضافي بالـTemplates لاكتشاف Vulnerabilities معروفة.
+
+* **Wapiti**
+  https://wapiti-scanner.github.io/
+  **الاستخدام:** Web Vulnerability Scanner إضافي للمقارنة والتحقق.
+
+* **Nikto**
+  https://cirt.net/Nikto2
+  **الاستخدام:** فحص الـWeb Server والـConfiguration.
+
+* **OpenVAS / Greenbone**
+  https://www.greenbone.net/en/community-edition/
+  **الاستخدام:** فحص الـSystems والـNetworks، كخيار للتوسع مستقبلًا.
+
+### Source Code — SAST
+
+* **Semgrep CE**
+  https://semgrep.dev/
+  **الاستخدام:** فحص الـSource Code واكتشاف Vulnerabilities.
+
+* **CodeQL**
+  https://codeql.github.com/
+  **الاستخدام:** SAST متقدم لتحليل الـSource Code.
+
+* **SonarQube Community**
+  https://www.sonarsource.com/products/sonarqube/
+  **الاستخدام:** Code Quality + Security Analysis.
+
+* **Bandit**
+  https://github.com/PyCQA/bandit
+  **الاستخدام:** Security Analysis للـPython.
+
+* **Brakeman**
+  https://brakemanscanner.org/
+  **الاستخدام:** Security Analysis لـRuby on Rails.
+
+* **gosec**
+  https://github.com/securego/gosec
+  **الاستخدام:** Security Analysis للـGo.
+
+### Secrets & Dependencies
+
+* **Gitleaks**
+  https://github.com/gitleaks/gitleaks
+  **الاستخدام:** اكتشاف Secrets وCredentials داخل الـCode.
+
+* **Trivy**
+  https://trivy.dev/
+  **الاستخدام:** فحص Dependencies وContainers وSecrets.
+
+* **OSV.dev / OSV-Scanner**
+  https://osv.dev/
+  https://github.com/google/osv-scanner
+  **الاستخدام:** فحص الـDependencies ومقارنتها بقاعدة Vulnerabilities.
+
+### AI
+
+* **Ollama**
+  https://ollama.com/
+  **الاستخدام:** تشغيل Local LLM لتحليل الـFindings والـSource Code.
+
+* **Cloud AI APIs**
+  **الاستخدام:** استخدام LLM جاهز لتحليل الـFindings، شرح الـVulnerabilities، واقتراح الـRemediation.
+
+### AI Security References
+
+* **PentestGPT**
+  https://github.com/GreyDGL/PentestGPT
+  **الاستخدام:** دراسة طريقة استخدام LLM في عمليات الـPentesting.
+
+* **Strix**
+  https://github.com/usestrix/strix
+  **الاستخدام:** دراسة دمج AI Agents مع أدوات الـSecurity والـVulnerability Validation.
+
+* **CAI**
+  https://github.com/aliasrobotics/cai
+  **الاستخدام:** دراسة استخدام AI Agents في Cybersecurity.
+
+* **PentAGI**
+  https://github.com/vxcontrol/pentagi
+  **الاستخدام:** دراسة الـMulti-Agent Security Testing.
+
+### Testing Environments
+
+* **OWASP Juice Shop**
+  https://owasp.org/www-project-juice-shop/
+  **الاستخدام:** بيئة قانونية لاختبار الـScanner.
+
+* **DVWA**
+  https://github.com/digininja/DVWA
+  **الاستخدام:** بيئة قانونية لاختبار Vulnerability Detection.
+
+### References
+
+* **OWASP Vulnerability Scanning Tools**
+  https://community.owasp.org/Vulnerability_Scanning_Tools
+
+* **Pentest-Tools Website Scanner**
+  https://pentest-tools.com/website-vulnerability-scanning/website-scanner
+
+* **PortSwigger — AI-Powered Scanner Vulnerabilities**
+  https://portswigger.net/web-security/llm-attacks/ai-powered-scanner-vulnerabilities
+
 
 
