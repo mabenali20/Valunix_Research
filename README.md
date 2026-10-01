@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>🛡️ Valunix </h1>
+  <h1> 🛡️ Valunix 🛡️ </h1>
   <p><b>AI-Powered Web Security & Penetration Testing Platform</b></p>
 </div>
 
