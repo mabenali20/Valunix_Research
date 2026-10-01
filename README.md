@@ -1,5 +1,7 @@
-                                                                # Valunix Research #
-
+<div align="center">
+  <h1>🛡️ Valunix Research</h1>
+  <p><b>AI-Powered Web Security & Penetration Testing Platform</b></p>
+</div>
 
 ## Table of Contents
 
@@ -9,7 +11,7 @@
 - [Research Papers](#research-papers)
 - [Tutorials](#tutorials)
 
-## Project Overview
+
 ## Project Overview
 
 ### 💡 ملخص الفكرة
