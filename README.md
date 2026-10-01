@@ -1,13 +1,5 @@
 <div align="center">
-  <h2>Keygraph</h2>
-  <!-- استبدل الرابط ده برابط اللوجو بتاعك -->
-  <img src="logo_url.png" alt="SHANNON" width="400" />
-  
-  <h3>AI Pentester for Web Apps and APIs</h3>
-  <p><i>-Authorized Security Testing Only-</i></p>
-  
-  <!-- استبدل الرابط ده برابط البادج بتاعك -->
-  <img src="badge_url.png" alt="Repository Of The Day" />
+  <h1>Valunix Research</h1>
 </div>
 
 <br>
@@ -18,17 +10,9 @@
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
-- [What is Shannon?](#what-is-shannon)
-  - [Why Shannon Exists](#why-shannon-exists)
-  - [Why "Shannon"?](#why-shannon)
-  - [Not a replacement for human pentesters](#not-a-replacement-for-human-pentesters)
-- [Shannon in Action](#shannon-in-action)
-- [Quick Start](#quick-start)
-  - [Prerequisites](#prerequisites)
-  - [Run Shannon](#run-shannon)
+- [Similar Projects](#similar-projects)
+  
+...
 
-## What is Shannon?
-تفاصيل القسم هنا...
-
-### Why Shannon Exists
-تفاصيل القسم هنا...
+## Similar Projects
+اكتب المشاريع المشابهة هنا...
