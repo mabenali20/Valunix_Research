@@ -1,6 +1,5 @@
-# Valunix Research
+                                                                # Valunix Research #
 
-*سيرش عن كل حاجه تخص المشروع بتاعنا*
 
 ## Table of Contents
 
