@@ -1,6 +1,3 @@
-> [!NOTE]
-> Shannon 3.0 is live: deeper security code analysis, more thoroughly vetted findings, a rebuilt CLI, native CI/CD, professional PDF reports, and SARIF.
-
 <div align="center">
   <h2>Keygraph</h2>
   <!-- استبدل الرابط ده برابط اللوجو بتاعك -->
