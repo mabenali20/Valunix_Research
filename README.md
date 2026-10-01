@@ -1,9 +1,6 @@
 # Valunix Research
 
-*Your Project Subtitle or Tagline Here*
-
-> 💡 **Tip**  
-> **AI agents and LLMs:** start with [llms.txt](llms.txt) for a concise map of this repository, or use [llms-full.txt](llms-full.txt) for the README and docs combined into one file.
+*سيرش عن كل حاجه تخص المشروع بتاعنا*
 
 ## Table of Contents
 
