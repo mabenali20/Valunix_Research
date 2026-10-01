@@ -5,9 +5,10 @@
 
 ## Table of Contents
 
-- [Project Overview 📌](#Project Overview 📌)
-- [Similar Projects](#similar-projects)
-- [Free Tools](#free-tools)
+* 📌 [Project Overview](#project-overview)
+* 🔗 [Similar Projects](#similar-projects)
+* 🧰 [Free Tools](#free-tools)
+
 
 
 ## Project Overview 📌
