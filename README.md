@@ -40,73 +40,59 @@
 
 ### 1. isitsecure
 
-**GitHub:** https://github.com/jaurakunal/isitsecure  
+**GitHub:** https://github.com/jaurakunal/isitsecure
 **Website:** https://isitsecure.ai/
 
-منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين `SAST` و`DAST` و`LLM Code Review` في عملية فحص واحدة. بتحلل الـ`Source Code`، وتفحص الـ`Web App` الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ`AI` لتحليل النتائج وتوليد حلول للإصلاح.
-
----
+منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الـSource Code، وتفحص الـWeb App الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـAI لتحليل النتائج وتوليد حلول للإصلاح.
 
 ### 2. Shannon
 
-**GitHub:** https://github.com/KeygraphHQ/shannon  
+**GitHub:** https://github.com/KeygraphHQ/shannon
 **Website:** https://keygraph.io/
 
-أداة `AI Pentester` مستقلة لتطبيقات الويب والـ`APIs`. بتحلل الـ`Source Code` لاكتشاف مسارات الهجوم، وبعدها تستخدم `Browser Automation` وأدوات اختبار فعلية لمحاولة استغلال الثغرات. الـ`Finding` لا يظهر في التقرير إلا بعد وجود `Proof of Concept` قابل للتنفيذ، بهدف تقليل النتائج الوهمية.
-
----
+أداة AI Pentester مستقلة لتطبيقات الويب والـAPIs. بتحلل الـSource Code لاكتشاف مسارات الهجوم، وبعدها تستخدم Browser Automation وأدوات اختبار فعلية لمحاولة استغلال الثغرات. الـFinding لا يظهر في التقرير إلا بعد وجود Proof of Concept قابل للتنفيذ، بهدف تقليل النتائج الوهمية.
 
 ### 3. Strix
 
-**GitHub:** https://github.com/usestrix/strix  
+**GitHub:** https://github.com/usestrix/strix
 **Website:** https://strix.ai/
 
-منصة مفتوحة المصدر تعتمد على `AI Agents` لتنفيذ `Penetration Testing` بشكل مستقل. بتشغل التطبيق، وتعمل `Reconnaissance` واختبارات واستغلال، ثم تتحقق من الثغرات من خلال `Proof-of-Concepts` حقيقية، وتقدم نتائج قابلة للتنفيذ والإصلاح، مع إمكانية استخدامها داخل `CI/CD`.
-
----
+منصة مفتوحة المصدر تعتمد على AI Agents لتنفيذ Penetration Testing بشكل مستقل. بتشغل التطبيق، وتعمل Reconnaissance واختبارات واستغلال، ثم تتحقق من الثغرات من خلال Proof-of-Concepts حقيقية، وتقدم نتائج قابلة للتنفيذ والإصلاح، مع إمكانية استخدامها داخل CI/CD.
 
 ### 4. WebPatcher
 
-**GitHub:** https://github.com/OmarHassan-99/WebPatcher  
+**GitHub:** https://github.com/OmarHassan-99/WebPatcher
 **Website:** Local / GitHub Project
 
-منصة بتركز على الربط بين اكتشاف ثغرات الويب وإصلاحها. بتستخدم `DAST` لاكتشاف المشاكل، وبعدها `LLMs` عبر `LangChain` لتوليد `Security Patches` مناسبة للـ`Framework` والـ`Code`، ثم تعمل `Validation` للـ`Patch` للتأكد إنه عالج المشكلة من غير ما يكسر سلوك التطبيق.
-
----
+منصة بتركز على الربط بين اكتشاف ثغرات الويب وإصلاحها. بتستخدم DAST لاكتشاف المشاكل، وبعدها LLMs عبر LangChain لتوليد Security Patches مناسبة للـFramework والـCode، ثم تعمل Validation للـPatch للتأكد إنه عالج المشكلة من غير ما يكسر سلوك التطبيق.
 
 ### 5. Diana
 
-**GitHub:** https://github.com/SageSalmon/Diana-Web-Scanner  
+**GitHub:** https://github.com/SageSalmon/Diana-Web-Scanner
 **Website:** Local / GitHub Project
 
-`AI-powered Web Vulnerability Scanner` بيجمع تقنيات الـ`Web Scanning` التقليدية مع `LLM-driven Security Testing`. الـ`AI` بيستخدم لفهم الـ`Endpoints` والـ`Responses`، وتوليد `Payloads` مناسبة للسياق، واكتشاف `Attack Chains` والتحقق من النتائج بهدف تقليل الـ`False Positives`.
-
----
+AI-powered Web Vulnerability Scanner بيجمع تقنيات الـWeb Scanning التقليدية مع LLM-driven Security Testing. الـAI بيستخدم لفهم الـEndpoints والـResponses، وتوليد Payloads مناسبة للسياق، واكتشاف Attack Chains والتحقق من النتائج بهدف تقليل الـFalse Positives.
 
 ### 6. Argus
 
-**GitHub:** https://github.com/Kentunji/argus  
+**GitHub:** https://github.com/Kentunji/argus
 **Website:** Local / GitHub Project
 
-`Web Application Vulnerability Scanner` بيعمل `Crawling` وفحص للـ`Web App` بحثًا عن ثغرات زي `XSS` و`SQL Injection` ومشاكل الـ`Security Headers`. بعد كده بيستخدم `LLM` لتحليل النتائج وإعطاء `Confidence Rating` وشرح مبسط وحلول مناسبة للـ`Technology Stack`، مع تقارير `HTML` و`JSON`.
-
----
+Web Application Vulnerability Scanner بيعمل Crawling وفحص للـWeb App بحثًا عن ثغرات زي XSS وSQL Injection ومشاكل الـSecurity Headers. بعد كده بيستخدم LLM لتحليل النتائج وإعطاء Confidence Rating وشرح مبسط وحلول مناسبة للـTechnology Stack، مع تقارير HTML وJSON.
 
 ### 7. VulnIQ
 
-**GitHub:** https://github.com/namanadep/vuln-iq  
+**GitHub:** https://github.com/namanadep/vuln-iq
 **Website:** Local / GitHub Project
 
-منصة `Security Assessment` بتجمع نتائج عدة أدوات Security في `Dashboard` واحدة، منها `CodeQL` و`Trivy` و`Gitleaks` و`OWASP ZAP` لفحص الـ`Source Code` والـ`Containers` والـ`Secrets` والـ`Web Applications`. وبتستخدم `GPT-4` لتحليل النتائج وعمل `Risk Scoring` وترتيب الـ`Vulnerabilities` وإنشاء تقارير `PDF`.
-
----
+منصة Security Assessment بتجمع نتائج عدة أدوات Security في Dashboard واحدة، منها CodeQL وTrivy وGitleaks وOWASP ZAP لفحص الـSource Code والـContainers والـSecrets والـWeb Applications. وبتستخدم GPT-4 لتحليل النتائج وعمل Risk Scoring وترتيب الـVulnerabilities وإنشاء تقارير PDF.
 
 ### 8. AutoSecScan
 
-**GitHub:** https://github.com/jhammant/AutoSecScan  
+**GitHub:** https://github.com/jhammant/AutoSecScan
 **Website:** Local / GitHub Project
 
-`Security Scanner` مفتوح المصدر وموجه للـ`Continuous Automated Pentesting`. بيجمع نتائج أدوات مختلفة لفحص الـ`Network` والـ`Hosts` والـ`Code` والـ`Dependencies` والـ`Secrets`، وبعدها يستخدم `LLM` لعمل `Triage` للنتائج، واكتشاف `False Positives`، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
+Security Scanner مفتوح المصدر وموجه للـContinuous Automated Pentesting. بيجمع نتائج أدوات مختلفة لفحص الـNetwork والـHosts والـCode والـDependencies والـSecrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
 
 ## Free Tools
 List of free tools goes here...
