@@ -71,28 +71,36 @@
 **GitHub:** https://github.com/SageSalmon/Diana-Web-Scanner
 **Website:** Local / GitHub Project
 
-AI-powered Web Vulnerability Scanner بيجمع تقنيات الـWeb Scanning التقليدية مع LLM-driven Security Testing. الـAI بيستخدم لفهم الـEndpoints والـResponses، وتوليد Payloads مناسبة للسياق، واكتشاف Attack Chains والتحقق من النتائج بهدف تقليل الـFalse Positives.
+المشروع عبارة عن أداة لفحص ثغرات تطبيقات الويب، وبيجمع بين تقنيات فحص الويب التقليدية وتقنيات LLM-driven Security Testing.
+
+الـAI بيستخدم لفهم الـEndpoints والـResponses، وتوليد Payloads مناسبة للسياق، واكتشاف Attack Chains، بالإضافة إلى التحقق من النتائج بهدف تقليل الـFalse Positives.
 
 ### 6. Argus
 
 **GitHub:** https://github.com/Kentunji/argus
 **Website:** Local / GitHub Project
 
-Web Application Vulnerability Scanner بيعمل Crawling وفحص للـWeb App بحثًا عن ثغرات زي XSS وSQL Injection ومشاكل الـSecurity Headers. بعد كده بيستخدم LLM لتحليل النتائج وإعطاء Confidence Rating وشرح مبسط وحلول مناسبة للـTechnology Stack، مع تقارير HTML وJSON.
+المشروع عبارة عن Web Application Vulnerability Scanner بيعمل Crawling وفحص للـWeb App بحثًا عن ثغرات زي XSS وSQL Injection ومشاكل الـSecurity Headers.
+
+بعد كده بيستخدم LLM لتحليل النتائج، وإعطاء Confidence Rating، وشرح مبسط للثغرات، واقتراح حلول مناسبة للـTechnology Stack، مع إمكانية إنشاء تقارير بصيغ HTML وJSON.
 
 ### 7. VulnIQ
 
 **GitHub:** https://github.com/namanadep/vuln-iq
 **Website:** Local / GitHub Project
 
-منصة Security Assessment بتجمع نتائج عدة أدوات Security في Dashboard واحدة، منها CodeQL وTrivy وGitleaks وOWASP ZAP لفحص الـSource Code والـContainers والـSecrets والـWeb Applications. وبتستخدم GPT-4 لتحليل النتائج وعمل Risk Scoring وترتيب الـVulnerabilities وإنشاء تقارير PDF.
+المشروع عبارة عن منصة Security Assessment بتجمع نتائج عدة أدوات Security في Dashboard واحدة، منها CodeQL وTrivy وGitleaks وOWASP ZAP لفحص الـSource Code والـContainers والـSecrets والـWeb Applications.
+
+المنصة بتستخدم GPT-4 لتحليل النتائج، وعمل Risk Scoring، وترتيب الـVulnerabilities حسب الخطورة، وإنشاء تقارير بصيغة PDF.
 
 ### 8. AutoSecScan
 
 **GitHub:** https://github.com/jhammant/AutoSecScan
 **Website:** Local / GitHub Project
 
-Security Scanner مفتوح المصدر وموجه للـContinuous Automated Pentesting. بيجمع نتائج أدوات مختلفة لفحص الـNetwork والـHosts والـCode والـDependencies والـSecrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
+المشروع عبارة عن Security Scanner مفتوح المصدر وموجه للـContinuous Automated Pentesting.
+
+بيجمع نتائج أدوات مختلفة لفحص الـNetwork والـHosts والـCode والـDependencies والـSecrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
 
 ## Free Tools
 List of free tools goes here...
