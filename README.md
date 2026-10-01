@@ -8,8 +8,6 @@
 - [Project Overview](#project-overview)
 - [Similar Projects](#similar-projects)
 - [Free Tools](#free-tools)
-- [Research Papers](#research-papers)
-- [Tutorials](#tutorials)
 
 
 ## Project Overview
@@ -113,16 +111,6 @@
 ## Free Tools
 List of free tools goes here...
 
-## Research Papers
-List of research papers goes here...
-
-## Tutorials
-List of tutorials goes here...
-## Free Tools
-
-List of free tools goes here...
-
-## Research Papers
 
 List of research papers goes here...
 
