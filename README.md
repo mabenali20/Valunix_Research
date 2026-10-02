@@ -53,8 +53,6 @@
 
 <div dir="rtl">
 
-اللينكات والتقنيات اتراجعت من الـ README الرسمي لكل مشروع يوم 2 أكتوبر 2026. أرقام النجوم والـ Commits بتتغير، فمتعتمدش عليها.
-
 </div>
 
 ### 1. isitsecure
@@ -64,7 +62,6 @@
 - **GitHub:** [jaurakunal/isitsecure](https://github.com/jaurakunal/isitsecure)
 - **Website:** https://isitsecure.ai/
 - **Stack:** Python 3.11+, Playwright (browser DAST) · Apache-2.0
-- **LLM:** Anthropic (Claude), Google (Gemini)
 - **Architecture doc:** [docs/architecture.md](https://github.com/jaurakunal/isitsecure/blob/main/docs/architecture.md)
 
 ```
@@ -76,10 +73,7 @@ Code -> SAST -> Findings -> Guide DAST -> Test -> Cross-Reference
 
 <div dir="rtl">
 
-منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الكود، وتفحص التطبيق الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ AI لتحليل النتائج وتوليد حلول للإصلاح.
-
-**الـ Architecture:** حوالي 29 Scanner مكتوبين بنفسهم (مش بتشغل ZAP أو Semgrep). نتايج الكود (SAST) بتولد اختبارات موجهة على التطبيق (DAST)، وبعدين بيتقارنوا ببعض لتأكيد الثغرة، والـ LLM بيعمل Triage ويكتب الإصلاحات. وفيه واجهة ويب محلية بأمر `isitsecure launch`.
-
+منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الكود، وتفحص التطبيق، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ AI لتحليل النتائج وتوليد حلول للإصلاح.
 </div>
 
 ### 2. Shannon
@@ -89,7 +83,7 @@ Code -> SAST -> Findings -> Guide DAST -> Test -> Cross-Reference
 - **GitHub:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Website:** [keygraph.io](https://keygraph.io/)
 - **Stack:** TypeScript, Node.js 18+, Docker (isolated worker per scan), Playwright · AGPL-3.0
-- **LLM:** Anthropic, others
+- **Architecture doc:**
 
 ```
 Recon + Vuln analysis (Injection, XSS, SSRF, Auth, Authz agents)
@@ -114,7 +108,7 @@ Agentic code analysis
 - **GitHub:** [usestrix/strix](https://github.com/usestrix/strix)
 - **Website:** [strix.ai](https://www.strix.ai/) · [Docs](https://docs.strix.ai/)
 - **Stack:** Python (PyPI package `strix-agent`), Docker sandbox, Caido (HTTP proxy), automated browser · Apache-2.0
-- **LLM:** OpenAI, Anthropic, Google, OpenRouter, Ollama, LM Studio
+- **Architecture doc:**
 
 ```
 Graph of Agents (recon / exploitation / validation)
@@ -139,7 +133,7 @@ Graph of Agents (recon / exploitation / validation)
 - **GitHub:** [OmarHassan-99/WebPatcher](https://github.com/OmarHassan-99/WebPatcher)
 - **Website:** Local / GitHub Project
 - **Stack:** React 19 (Vite), Node.js 18+, Express 5, MongoDB, Socket.io, LangChain (TypeScript), OWASP ZAP 2.17, Schemathesis · MIT
-- **LLM:** OpenRouter, OpenAI, Ollama
+- **Architecture doc:**
 
 ```
 Frontend (React)  :3000
@@ -170,7 +164,6 @@ Scan: queued -> running -> analyzing -> patching -> validating -> completed
 - **GitHub:** [SageSalmon/Diana-Web-Scanner](https://github.com/SageSalmon/Diana-Web-Scanner)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.12+, HTTPX (async), Playwright, Typer (CLI), FastAPI, SQLAlchemy + PostgreSQL, Terraform, AWS ECS Fargate
-- **LLM:** Amazon Bedrock (Claude, DeepSeek), Ollama
 - **Architecture doc:** [docs/ARCHITECTURE.md](https://github.com/SageSalmon/Diana-Web-Scanner/blob/main/docs/ARCHITECTURE.md)
 
 ```
@@ -199,7 +192,7 @@ Target <-> Intelligent Crawler -> AI Analyzer -> Payload Generator
 - **GitHub:** [Kentunji/argus](https://github.com/Kentunji/argus)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.10+, requests, BeautifulSoup, openai client, rich, PyYAML · MIT
-- **LLM:** DeepSeek, OpenAI, Groq, Ollama
+- **Architecture doc:**
 
 ```
 Crawler (static HTML) -> Detectors (XSS, SQLi, Headers/Cookies)
@@ -227,9 +220,8 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 - **GitHub:** [namanadep/vuln-iq](https://github.com/namanadep/vuln-iq)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.9+, Flask 2.3+, Docker Compose · MIT
-- **Tools:** CodeQL (SAST), Trivy (dependencies / containers), Gitleaks (secrets), OWASP ZAP (DAST)
-- **LLM:** OpenAI GPT-4
-- **Output:** Web dashboard, PDF report
+- **Architecture doc:**
+
 
 ```
 security_scanner/
@@ -261,10 +253,8 @@ security_scanner/
 - **GitHub:** [jhammant/AutoSecScan](https://github.com/jhammant/AutoSecScan)
 - **Website:** Local / GitHub Project
 - **Stack:** Python (CLI), Docker
-- **Tools:** nmap, nuclei, nikto, semgrep, trivy, gitleaks, osv-scanner
-- **LLM:** Ollama, LM Studio, Anthropic, Claude Code Router
-- **Output:** JSON, HTML, PDF, SARIF
-- **Automation:** cron, git hooks, GitHub Action
+- **Architecture doc:**
+
 
 ```
 Scanners (host + code) -> JSON results -> LLM triage
