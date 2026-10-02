@@ -62,7 +62,6 @@
 - **GitHub:** [jaurakunal/isitsecure](https://github.com/jaurakunal/isitsecure)
 - **Website:** https://isitsecure.ai/
 - **Stack:** Python 3.11+, Playwright (browser DAST) · Apache-2.0
-- **Architecture doc:** [docs/architecture.md](https://github.com/jaurakunal/isitsecure/blob/main/docs/architecture.md)
 
 ```
 Code -> SAST -> Findings -> Guide DAST -> Test -> Cross-Reference
@@ -83,7 +82,6 @@ Code -> SAST -> Findings -> Guide DAST -> Test -> Cross-Reference
 - **GitHub:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Website:** [keygraph.io](https://keygraph.io/)
 - **Stack:** TypeScript, Node.js 18+, Docker (isolated worker per scan), Playwright · AGPL-3.0
-- **Architecture doc:**
 
 ```
 Recon + Vuln analysis (Injection, XSS, SSRF, Auth, Authz agents)
@@ -108,7 +106,6 @@ Agentic code analysis
 - **GitHub:** [usestrix/strix](https://github.com/usestrix/strix)
 - **Website:** [strix.ai](https://www.strix.ai/) · [Docs](https://docs.strix.ai/)
 - **Stack:** Python (PyPI package `strix-agent`), Docker sandbox, Caido (HTTP proxy), automated browser · Apache-2.0
-- **Architecture doc:**
 
 ```
 Graph of Agents (recon / exploitation / validation)
@@ -122,8 +119,6 @@ Graph of Agents (recon / exploitation / validation)
 
 منصة مفتوحة المصدر تعتمد على AI Agents لتنفيذ Penetration Testing بشكل مستقل. بتشغل التطبيق، وتعمل Reconnaissance واختبارات واستغلال، ثم تتحقق من الثغرات من خلال Proof-of-Concepts حقيقية، وتقدم نتائج قابلة للتنفيذ والإصلاح، مع إمكانية استخدامها داخل CI/CD.
 
-**الـ Architecture:** فريق Agents بيتعاونوا ويتشاركوا الاكتشافات، وكل Agent معاه أدوات حقيقية (Proxy ومتصفح وTerminal) جوه Docker Sandbox. فيه كمان Dashboard محلي لعرض النتايج.
-
 </div>
 
 ### 4. WebPatcher
@@ -133,7 +128,6 @@ Graph of Agents (recon / exploitation / validation)
 - **GitHub:** [OmarHassan-99/WebPatcher](https://github.com/OmarHassan-99/WebPatcher)
 - **Website:** Local / GitHub Project
 - **Stack:** React 19 (Vite), Node.js 18+, Express 5, MongoDB, Socket.io, LangChain (TypeScript), OWASP ZAP 2.17, Schemathesis · MIT
-- **Architecture doc:**
 
 ```
 Frontend (React)  :3000
@@ -164,7 +158,6 @@ Scan: queued -> running -> analyzing -> patching -> validating -> completed
 - **GitHub:** [SageSalmon/Diana-Web-Scanner](https://github.com/SageSalmon/Diana-Web-Scanner)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.12+, HTTPX (async), Playwright, Typer (CLI), FastAPI, SQLAlchemy + PostgreSQL, Terraform, AWS ECS Fargate
-- **Architecture doc:** [docs/ARCHITECTURE.md](https://github.com/SageSalmon/Diana-Web-Scanner/blob/main/docs/ARCHITECTURE.md)
 
 ```
 Target <-> Intelligent Crawler -> AI Analyzer -> Payload Generator
@@ -179,10 +172,6 @@ Target <-> Intelligent Crawler -> AI Analyzer -> Payload Generator
 
 الـ AI بيستخدم لفهم الـ Endpoints والـ Responses، وتوليد Payloads مناسبة للسياق، واكتشاف Attack Chains، بالإضافة إلى التحقق من النتائج بهدف تقليل الـ False Positives.
 
-**الـ Architecture:** كل خطوة في السلسلة فيها AI: بيحلل، وبيولد Payloads، وبيتحقق من النتيجة قبل ما تدخل التقرير. ومكتوب بالكامل (مش بيشغل أدوات جاهزة).
-
-**ملحوظة:** النشر الكامل على AWS بيتكلف فلوس. بس فيه وضع محلي (`--local`) بيشتغل بـ Ollama من غير AWS.
-
 </div>
 
 ### 6. Argus
@@ -192,8 +181,7 @@ Target <-> Intelligent Crawler -> AI Analyzer -> Payload Generator
 - **GitHub:** [Kentunji/argus](https://github.com/Kentunji/argus)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.10+, requests, BeautifulSoup, openai client, rich, PyYAML · MIT
-- **Architecture doc:**
-
+  
 ```
 Crawler (static HTML) -> Detectors (XSS, SQLi, Headers/Cookies)
    -> LLM triage (confidence + explanation + fix code) -> Reports
@@ -207,10 +195,6 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 
 بعد كده بيستخدم LLM لتحليل النتائج، وإعطاء Confidence Rating، وشرح مبسط للثغرات، واقتراح حلول مناسبة للـ Technology Stack، مع إمكانية إنشاء تقارير بصيغة HTML وJSON.
 
-**الـ Architecture:** بسيط وسهل الفهم: Crawler ثم 3 Detectors ثم LLM لتحليل كل نتيجة. لو الـ LLM وقع، الفحص بيكمل والتقرير بيطلع من غيره. وبيرجع Exit Code مناسب للاستخدام في CI.
-
-**ملحوظة:** النسخة الحالية v0.1: بتقرا HTML ثابت بس (من غير JavaScript) ومن غير تسجيل دخول. مناسب للتعلم وفهم الفكرة.
-
 </div>
 
 ### 7. VulnIQ
@@ -220,8 +204,6 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 - **GitHub:** [namanadep/vuln-iq](https://github.com/namanadep/vuln-iq)
 - **Website:** Local / GitHub Project
 - **Stack:** Python 3.9+, Flask 2.3+, Docker Compose · MIT
-- **Architecture doc:**
-
 
 ```
 security_scanner/
@@ -240,10 +222,6 @@ security_scanner/
 
 المنصة بتستخدم GPT-4 لتحليل النتائج، وعمل Risk Scoring، وترتيب الثغرات حسب الخطورة، وإنشاء تقارير بصيغة PDF.
 
-**الـ Architecture:** نفس فكرة "ندمج أدوات جاهزة ونحط AI فوقها". كل أداة ليها Service في فولدر `services`، والـ Flask بيعرض النتايج في Dashboard.
-
-**ملحوظة:** بيحتاج OpenAI API key مدفوع، وفكرته قريبة جدًا من تصميمنا.
-
 </div>
 
 ### 8. AutoSecScan
@@ -253,8 +231,6 @@ security_scanner/
 - **GitHub:** [jhammant/AutoSecScan](https://github.com/jhammant/AutoSecScan)
 - **Website:** Local / GitHub Project
 - **Stack:** Python (CLI), Docker
-- **Architecture doc:**
-
 
 ```
 Scanners (host + code) -> JSON results -> LLM triage
@@ -270,10 +246,6 @@ Mode 2: agentic (--agent), the LLM decides the next step
 Security Scanner مفتوح المصدر وموجه للـ Continuous Automated Pentesting.
 
 بيجمع نتائج أدوات مختلفة لفحص الـ Network والـ Hosts والكود والـ Dependencies والـ Secrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
-
-**الـ Architecture:** بيغلف الأدوات الجاهزة وبيحط الـ LLM فوقها، وده بالظبط الأسلوب اللي هنمشي عليه. وفيه وضعين: Pipeline ثابت، أو وضع Agent بيقرر فيه الموديل الخطوة الجاية. والموديل ممكن يكون محلي بالكامل.
-
-**ملحوظة:** مفيش فيه Fix تلقائي ولا واجهة ويب. وبيمنع الفحص برا قايمة مواقع مصرح بيها (Allowlist)، وده شيء حلو نشوفه في موضوع الـ Legal.
 
 </div>
 
@@ -342,7 +314,7 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 </div>
 <div dir="rtl">
 
-فحص خادم الويب وإعداداته. الصفحة القديمة `cirt.net/Nikto2` اتشالت، واللينك ده هو المصدر الحالي.
+فحص خادم الويب وإعداداته.
 
 </div>
 
@@ -405,23 +377,9 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 
 <div dir="ltr">
 
-**Brakeman** — [Website](https://brakemanscanner.org/)
-
-</div>
-<div dir="rtl">
-
-تحليل أمان تطبيقات Ruby on Rails.
-
 </div>
 
 <div dir="ltr">
-
-**gosec** — [GitHub](https://github.com/securego/gosec)
-
-</div>
-<div dir="rtl">
-
-تحليل أمان الكود الخاص بلغة Go.
 
 </div>
 
@@ -474,13 +432,6 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 </div>
 
 <div dir="ltr">
-
-**Cloud AI APIs** — [Free AI Models](#free-ai-models)
-
-</div>
-<div dir="rtl">
-
-استخدام نموذج جاهز لتحليل نتائج الفحص، وشرح الثغرات، واقتراح طرق الإصلاح. التفاصيل في قسم Free AI Models.
 
 </div>
 
@@ -547,8 +498,6 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 
 <div dir="rtl">
 
-حدود الاستخدام المجاني بتتغير كتير. راجع الأرقام الحالية على موقع كل خدمة قبل ما نعتمد عليها في التنفيذ.
-
 ### 1. موديلات محلية (عن طريق Ollama)
 
 مجانية تمامًا ومبتبعتش الكود لأي حد، بس محتاجة جهاز كويس (رام وكارت شاشة يفضل). أمثلة:
@@ -580,9 +529,6 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 
 <div dir="rtl">
 
-### 3. ملحوظة
-
-بعض المشاريع المشابهة (زي isitsecure) بتشتغل بـ APIs مدفوعة. إحنا هنعتمد على الأنواع المجانية أو المحلية، وده بيدينا ميزة التكلفة وميزة الخصوصية.
 
 </div>
 
@@ -599,7 +545,5 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 </div>
 
 <div dir="rtl">
-
-لينك PortSwigger بيشرح مخاطر الـ AI Scanners نفسها، زي Prompt Injection من محتوى الموقع المفحوص. مهم نحطه في بالنا وإحنا بنصمم الجزء الخاص بالـ AI.
 
 </div>
