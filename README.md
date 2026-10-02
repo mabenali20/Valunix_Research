@@ -10,7 +10,6 @@
 - [Similar Projects](#similar-projects)
 - [Free Tools](#free-tools)
 - [Free AI Models](#free-ai-models)
-- [Testing Environments](#testing-environments)
 - [References](#references)
 
 ---
@@ -54,7 +53,7 @@
 
 <div dir="rtl">
 
-اللينكات كلها اتراجعت يوم 2 أكتوبر 2026. أرقام النجوم والـ Commits بتتغير، فمتعتمدش عليها.
+اللينكات والتقنيات اتراجعت من الـ README الرسمي لكل مشروع يوم 2 أكتوبر 2026. أرقام النجوم والـ Commits بتتغير، فمتعتمدش عليها.
 
 </div>
 
@@ -64,8 +63,14 @@
 
 - **GitHub:** [jaurakunal/isitsecure](https://github.com/jaurakunal/isitsecure)
 - **Website:** https://isitsecure.ai/
-- **Stack:** Python · Apache-2.0
+- **Stack:** Python 3.11+, Playwright (browser DAST) · Apache-2.0
+- **LLM:** Anthropic (Claude), Google (Gemini)
 - **Architecture doc:** [docs/architecture.md](https://github.com/jaurakunal/isitsecure/blob/main/docs/architecture.md)
+
+```
+Code -> SAST -> Findings -> Guide DAST -> Test -> Cross-Reference
+     -> LLM Triage -> Report -> Fixes
+```
 
 </div>
 
@@ -73,7 +78,8 @@
 
 منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الكود، وتفحص التطبيق الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ AI لتحليل النتائج وتوليد حلول للإصلاح.
 
-**ملحوظة:**  الـ AI فيه بيشتغل بـ Anthropic أو Gemini API بس، وبتكلف فلوس على حسب حجم الفحص.
+**الـ Architecture:** حوالي 29 Scanner مكتوبين بنفسهم (مش بتشغل ZAP أو Semgrep). نتايج الكود (SAST) بتولد اختبارات موجهة على التطبيق (DAST)، وبعدين بيتقارنوا ببعض لتأكيد الثغرة، والـ LLM بيعمل Triage ويكتب الإصلاحات. وفيه واجهة ويب محلية بأمر `isitsecure launch`.
+
 </div>
 
 ### 2. Shannon
@@ -82,15 +88,22 @@
 
 - **GitHub:** [KeygraphHQ/shannon](https://github.com/KeygraphHQ/shannon)
 - **Website:** [keygraph.io](https://keygraph.io/)
-- **Stack:** TypeScript · AGPL-3.0 (Shannon Lite)
+- **Stack:** TypeScript, Node.js 18+, Docker (isolated worker per scan), Playwright · AGPL-3.0
+- **LLM:** Anthropic, others
+
+```
+Recon + Vuln analysis (Injection, XSS, SSRF, Auth, Authz agents)
+Agentic code analysis
+        -> Reconciled exploitation queue
+        -> Exploitation agents (real PoC)
+        -> Report
+```
 
 </div>
 
 <div dir="rtl">
 
 أداة AI Pentester مستقلة لتطبيقات الويب والـ APIs. بتحلل الكود لاكتشاف مسارات الهجوم، وبعدها تستخدم Browser Automation وأدوات اختبار فعلية لمحاولة استغلال الثغرات. الثغرة لا تظهر في التقرير إلا بعد وجود Proof of Concept قابل للتنفيذ، بهدف تقليل النتائج الوهمية.
-
-**ملحوظة:** النسخة المجانية لازم تديها السورس كود مع لينك الموقع (White-box). وفيه نسخة تانية مدفوعة اسمها Shannon Pro.
 
 </div>
 
@@ -99,7 +112,15 @@
 <div dir="ltr">
 
 - **GitHub:** [usestrix/strix](https://github.com/usestrix/strix)
-- **Website:** [strix.ai](https://www.strix.ai/)
+- **Website:** [strix.ai](https://www.strix.ai/) · [Docs](https://docs.strix.ai/)
+- **Stack:** Python (PyPI package `strix-agent`), Docker sandbox, Caido (HTTP proxy), automated browser · Apache-2.0
+- **LLM:** OpenAI, Anthropic, Google, OpenRouter, Ollama, LM Studio
+
+```
+Graph of Agents (recon / exploitation / validation)
+   -> tools: HTTP proxy, browser, terminal, Python runtime
+   -> PoC validation -> findings + fix
+```
 
 </div>
 
@@ -107,7 +128,7 @@
 
 منصة مفتوحة المصدر تعتمد على AI Agents لتنفيذ Penetration Testing بشكل مستقل. بتشغل التطبيق، وتعمل Reconnaissance واختبارات واستغلال، ثم تتحقق من الثغرات من خلال Proof-of-Concepts حقيقية، وتقدم نتائج قابلة للتنفيذ والإصلاح، مع إمكانية استخدامها داخل CI/CD.
 
-**ملحوظة:** ليها نسخة مفتوحة المصدر ونسخة تجارية مستضافة، وبتقدم إصلاح تلقائي على شكل Pull Request، وده قريب من فيتشر "الإصلاح كـ Pull Request" عندنا.
+**الـ Architecture:** فريق Agents بيتعاونوا ويتشاركوا الاكتشافات، وكل Agent معاه أدوات حقيقية (Proxy ومتصفح وTerminal) جوه Docker Sandbox. فيه كمان Dashboard محلي لعرض النتايج.
 
 </div>
 
@@ -117,12 +138,28 @@
 
 - **GitHub:** [OmarHassan-99/WebPatcher](https://github.com/OmarHassan-99/WebPatcher)
 - **Website:** Local / GitHub Project
+- **Stack:** React 19 (Vite), Node.js 18+, Express 5, MongoDB, Socket.io, LangChain (TypeScript), OWASP ZAP 2.17, Schemathesis · MIT
+- **LLM:** OpenRouter, OpenAI, Ollama
+
+```
+Frontend (React)  :3000
+      | REST + WebSocket
+Backend (Express) :5050  ->  MongoDB, OWASP ZAP daemon, Validation engine
+      | REST
+LangChain service :3001  ->  LLM API
+
+Scan: queued -> running -> analyzing -> patching -> validating -> completed
+```
 
 </div>
 
 <div dir="rtl">
 
 منصة بتركز على الربط بين اكتشاف ثغرات الويب وإصلاحها. بتستخدم DAST لاكتشاف المشاكل، وبعدها LLMs عبر LangChain لتوليد Security Patches مناسبة للـ Framework والكود، ثم تعمل Validation للـ Patch للتأكد إنه عالج المشكلة من غير ما يكسر سلوك التطبيق.
+
+**الـ Architecture:** 3 خدمات منفصلة: واجهة React، وBackend بيتحكم في ZAP والداتا بيز وبينسق الفحص، وخدمة LangChain مسؤولة بس عن توليد الـ Patches. بعد التعديل بيطبق الـ Patch على نسخة من الريبو، ويشغل السيرفر، ويعيد الفحص بـ ZAP، ويقارن قبل وبعد، وفي الآخر يفتح Pull Request.
+
+**ملحوظة:** أقرب مشروع لفكرتنا (فحص بأداة جاهزة + AI فوقها + Re-scan + PR). ويستحق دراسة الـ Structure بتاعه بالتفصيل.
 
 </div>
 
@@ -132,6 +169,14 @@
 
 - **GitHub:** [SageSalmon/Diana-Web-Scanner](https://github.com/SageSalmon/Diana-Web-Scanner)
 - **Website:** Local / GitHub Project
+- **Stack:** Python 3.12+, HTTPX (async), Playwright, Typer (CLI), FastAPI, SQLAlchemy + PostgreSQL, Terraform, AWS ECS Fargate
+- **LLM:** Amazon Bedrock (Claude, DeepSeek), Ollama
+- **Architecture doc:** [docs/ARCHITECTURE.md](https://github.com/SageSalmon/Diana-Web-Scanner/blob/main/docs/ARCHITECTURE.md)
+
+```
+Target <-> Intelligent Crawler -> AI Analyzer -> Payload Generator
+       -> Active Tester -> AI Validator -> Report Generator
+```
 
 </div>
 
@@ -141,6 +186,10 @@
 
 الـ AI بيستخدم لفهم الـ Endpoints والـ Responses، وتوليد Payloads مناسبة للسياق، واكتشاف Attack Chains، بالإضافة إلى التحقق من النتائج بهدف تقليل الـ False Positives.
 
+**الـ Architecture:** كل خطوة في السلسلة فيها AI: بيحلل، وبيولد Payloads، وبيتحقق من النتيجة قبل ما تدخل التقرير. ومكتوب بالكامل (مش بيشغل أدوات جاهزة).
+
+**ملحوظة:** النشر الكامل على AWS بيتكلف فلوس. بس فيه وضع محلي (`--local`) بيشتغل بـ Ollama من غير AWS.
+
 </div>
 
 ### 6. Argus
@@ -149,6 +198,13 @@
 
 - **GitHub:** [Kentunji/argus](https://github.com/Kentunji/argus)
 - **Website:** Local / GitHub Project
+- **Stack:** Python 3.10+, requests, BeautifulSoup, openai client, rich, PyYAML · MIT
+- **LLM:** DeepSeek, OpenAI, Groq, Ollama
+
+```
+Crawler (static HTML) -> Detectors (XSS, SQLi, Headers/Cookies)
+   -> LLM triage (confidence + explanation + fix code) -> Reports
+```
 
 </div>
 
@@ -158,6 +214,10 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 
 بعد كده بيستخدم LLM لتحليل النتائج، وإعطاء Confidence Rating، وشرح مبسط للثغرات، واقتراح حلول مناسبة للـ Technology Stack، مع إمكانية إنشاء تقارير بصيغة HTML وJSON.
 
+**الـ Architecture:** بسيط وسهل الفهم: Crawler ثم 3 Detectors ثم LLM لتحليل كل نتيجة. لو الـ LLM وقع، الفحص بيكمل والتقرير بيطلع من غيره. وبيرجع Exit Code مناسب للاستخدام في CI.
+
+**ملحوظة:** النسخة الحالية v0.1: بتقرا HTML ثابت بس (من غير JavaScript) ومن غير تسجيل دخول. مناسب للتعلم وفهم الفكرة.
+
 </div>
 
 ### 7. VulnIQ
@@ -166,6 +226,19 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 
 - **GitHub:** [namanadep/vuln-iq](https://github.com/namanadep/vuln-iq)
 - **Website:** Local / GitHub Project
+- **Stack:** Python 3.9+, Flask 2.3+, Docker Compose · MIT
+- **Tools:** CodeQL (SAST), Trivy (dependencies / containers), Gitleaks (secrets), OWASP ZAP (DAST)
+- **LLM:** OpenAI GPT-4
+- **Output:** Web dashboard, PDF report
+
+```
+security_scanner/
+  app/
+    models/    # Database models
+    routes/    # API endpoints
+    services/  # Security scanners
+  templates/   # HTML templates
+```
 
 </div>
 
@@ -175,6 +248,10 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 
 المنصة بتستخدم GPT-4 لتحليل النتائج، وعمل Risk Scoring، وترتيب الثغرات حسب الخطورة، وإنشاء تقارير بصيغة PDF.
 
+**الـ Architecture:** نفس فكرة "ندمج أدوات جاهزة ونحط AI فوقها". كل أداة ليها Service في فولدر `services`، والـ Flask بيعرض النتايج في Dashboard.
+
+**ملحوظة:** بيحتاج OpenAI API key مدفوع، وفكرته قريبة جدًا من تصميمنا.
+
 </div>
 
 ### 8. AutoSecScan
@@ -183,6 +260,18 @@ Web Application Vulnerability Scanner بيعمل Crawling وفحص للتطبي�
 
 - **GitHub:** [jhammant/AutoSecScan](https://github.com/jhammant/AutoSecScan)
 - **Website:** Local / GitHub Project
+- **Stack:** Python (CLI), Docker
+- **Tools:** nmap, nuclei, nikto, semgrep, trivy, gitleaks, osv-scanner
+- **LLM:** Ollama, LM Studio, Anthropic, Claude Code Router
+- **Output:** JSON, HTML, PDF, SARIF
+- **Automation:** cron, git hooks, GitHub Action
+
+```
+Scanners (host + code) -> JSON results -> LLM triage
+   (false positives, re-rank severity, explain, suggest fix) -> Reports
+Mode 1: fixed pipeline
+Mode 2: agentic (--agent), the LLM decides the next step
+```
 
 </div>
 
@@ -192,13 +281,22 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 
 بيجمع نتائج أدوات مختلفة لفحص الـ Network والـ Hosts والكود والـ Dependencies والـ Secrets، وبعدها يستخدم LLM لعمل Triage للنتائج، واكتشاف False Positives، وإعادة ترتيب الخطورة، وشرح المشاكل واقتراح حلول في تقرير موحد.
 
+**الـ Architecture:** بيغلف الأدوات الجاهزة وبيحط الـ LLM فوقها، وده بالظبط الأسلوب اللي هنمشي عليه. وفيه وضعين: Pipeline ثابت، أو وضع Agent بيقرر فيه الموديل الخطوة الجاية. والموديل ممكن يكون محلي بالكامل.
+
+**ملحوظة:** مفيش فيه Fix تلقائي ولا واجهة ويب. وبيمنع الفحص برا قايمة مواقع مصرح بيها (Allowlist)، وده شيء حلو نشوفه في موضوع الـ Legal.
+
 </div>
 
 ### 🔍 إزاي نفهم الـ Architecture بتاعهم
 
 <div dir="rtl">
 
-افتح الـ Repo بتاع كل مشروع من دول (الأهم: isitsecure وShannon وStrix وWebPatcher وArgus) وجاوب على 3 أسئلة:
+المشاريع دي بتنقسم لنوعين:
+
+- **بتغلف أدوات جاهزة وتحط AI فوقها (زي اللي هنعمله):** WebPatcher وVulnIQ وAutoSecScan. الأفضل نبدأ بيهم.
+- **بتكتب الـ Scanner أو الـ Agents بنفسها:** isitsecure وShannon وStrix وDiana وArgus. مفيدة لفهم الفكرة، بس أصعب في التنفيذ.
+
+ولو عايز تفتح أي Repo بنفسك، جاوب على 3 أسئلة:
 
 1. **مكتوب بإيه؟** (Python ولا TypeScript ولا غيره).
 2. **بيشغل الأدوات إزاي؟** (ZAP وNuclei وغيرهم)، وبيبعت نتيجتها للـ AI إزاي؟
@@ -495,34 +593,6 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 ### 3. ملحوظة
 
 بعض المشاريع المشابهة (زي isitsecure) بتشتغل بـ APIs مدفوعة. إحنا هنعتمد على الأنواع المجانية أو المحلية، وده بيدينا ميزة التكلفة وميزة الخصوصية.
-
-</div>
-
----
-
-## Testing Environments
-
-<div dir="ltr">
-
-**OWASP Juice Shop** — [Website](https://owasp.org/www-project-juice-shop/) · [GitHub](https://github.com/juice-shop/juice-shop)
-
-</div>
-<div dir="rtl">
-
-بيئة قانونية لاختبار أداة الفحص الخاصة بنا.
-
-</div>
-
-<div dir="ltr">
-
-**DVWA** — [GitHub](https://github.com/digininja/DVWA)
-
-</div>
-<div dir="rtl">
-
-بيئة قانونية لاختبار اكتشاف الثغرات.
-
-**تنبيه:** الفحص بيتعمل على مواقع التجربة دي أو على مواقع بإذن صاحبها بس. اختبار موقع من غير إذن ممنوع قانونيًا.
 
 </div>
 
