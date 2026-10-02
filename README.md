@@ -461,12 +461,6 @@ Security Scanner مفتوح المصدر وموجه للـ Continuous Automated 
 
 <div dir="ltr">
 
-**Strix** — [GitHub](https://github.com/usestrix/strix)
-
-</div>
-<div dir="rtl">
-
-دراسة دمج وكلاء الذكاء الاصطناعي مع أدوات الأمان والتحقق من الثغرات.
 
 </div>
 
