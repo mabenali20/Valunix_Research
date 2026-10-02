@@ -64,7 +64,7 @@
 <div dir="rtl">
 
 - **GitHub:** [jaurakunal/isitsecure](https://github.com/jaurakunal/isitsecure)
-- **Website:** مفيش موقع رسمي للمشروع. الدومين `isitsecure.ai` بيفتح منتج تاني مالوش علاقة بالمشروع ده، فاتشال من هنا.
+- **Website:** https://isitsecure.ai/
 - **التقنيات:** Python، والـ License هو Apache-2.0.
 
 منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الـ Source Code، وتفحص الـ Web App الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ AI لتحليل النتائج وتوليد حلول للإصلاح.
