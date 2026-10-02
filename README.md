@@ -64,7 +64,7 @@
 <div dir="ltr">
 
 - **GitHub:** [jaurakunal/isitsecure](https://github.com/jaurakunal/isitsecure)
-- **Website:** None
+- **Website:** https://isitsecure.ai/
 - **Stack:** Python · Apache-2.0
 - **Architecture doc:** [docs/architecture.md](https://github.com/jaurakunal/isitsecure/blob/main/docs/architecture.md)
 
@@ -74,8 +74,7 @@
 
 منصة مفتوحة المصدر لفحص أمان تطبيقات الويب، بتجمع بين SAST وDAST وLLM Code Review في عملية فحص واحدة. بتحلل الكود، وتفحص التطبيق الشغال، وتستخدم نتائج تحليل الكود لتوجيه اختبارات على التطبيق، ثم تستخدم الـ AI لتحليل النتائج وتوليد حلول للإصلاح.
 
-**ملحوظة:** مفيش موقع رسمي للمشروع. الدومين `isitsecure.ai` بيفتح منتج تاني مالوش علاقة بيه. وكمان الـ AI فيه بيشتغل بـ Anthropic أو Gemini API بس، وبتكلف فلوس على حسب حجم الفحص.
-
+**ملحوظة:**  الـ AI فيه بيشتغل بـ Anthropic أو Gemini API بس، وبتكلف فلوس على حسب حجم الفحص.
 </div>
 
 ### 2. Shannon
